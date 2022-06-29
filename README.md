@@ -26,7 +26,7 @@ To get a local copy follow these simple steps.
 ## Live demo
 
 You can try the functionality of this application by clicking:    
-[Demo](https://calm-retreat-24470.herokuapp.com/)
+[Demo](https://franciscos-budget-app.herokuapp.com)
 
 ## Authors
 
