@@ -1,1 +1,1 @@
-task :spec => ["db:test:prepare", "db:seed"]
+task spec: ['db:test:prepare', 'db:seed']
