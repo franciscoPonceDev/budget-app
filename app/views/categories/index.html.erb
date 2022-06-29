@@ -10,7 +10,7 @@
 <%= render "shared/navbar"%>
 <div class="container flex column gap-10">  
   <%@categories.each do |category|%>
-  <a href=<%=entities_path(category_id: category.id )%> class="text">
+  <a id="category" href=<%=entities_path(category_id: category.id )%> class="text">
     <div class="flex justify-between padding-20 color-bg-white">
         <img src=<%=image_path("save-money.png")%> class="rounded img-w60 flex-1"/>
       <div class="flex align-center flex-3 justify-between padding-20">
