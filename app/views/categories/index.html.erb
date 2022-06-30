@@ -12,7 +12,11 @@
   <%@categories.each do |category|%>
   <a id="category" href=<%=entities_path(category_id: category.id )%> class="text">
     <div class="flex justify-between padding-20 color-bg-white">
-        <img src=<%=image_path("save-money.png")%> class="rounded img-w60 flex-1"/>
+        <% if category.image.attached?%>
+          <img src=<%=url_for(category.image)%> class="rounded img-w100"/>
+        <%else%>
+          <img src=<%=image_path("save-money.png")%> class="rounded img-w60 flex-1"/>
+        <%end%>
       <div class="flex align-center flex-3 justify-between padding-20">
         <p class="font-large text-color text"> <%=category.name%> </p>
         <p class="bold text text-color" >  <%=number_to_currency category.entities.where(user: current_user).sum(:amount)%> </p>

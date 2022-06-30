@@ -15,7 +15,7 @@
       </div>
     </div>
 <div class="container flex column gap-10 ">  
-    <%@entities.each do |entity|%>
+    <%@category.entities.order(created_at: :desc).each do |entity|%>
         <div class="flex column justify-between color-bg-white padding-20">
           <div class="flex justify-between">
             <a href=<%=entity_path(id: entity.id )%> class="text">
