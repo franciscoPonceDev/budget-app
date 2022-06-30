@@ -12,6 +12,9 @@
     <div class="field">
       <%= form.text_field :name, autofocus: true, placeholder: "Name" %>
       <%= form.number_field :amount, autofocus: true, placeholder: "Amount" %>
+      <%= form.select :selected_categories, current_user.categories.collect { |category| [category.name, category.id] }, {
+        :multiple => true,
+      }  %>
     </div>
   <% end %>
 </div>
